@@ -192,7 +192,7 @@ body {
 }
 
 .logo-text {
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--text-secondary);
     letter-spacing: -1px;
@@ -644,7 +644,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 32px;
-    margin-top: 48px;
+    margin-top: 68px;
 }
 
 .btn-cta-primary {
@@ -1287,7 +1287,7 @@ body {
     }
     
     .logo-text {
-        font-size: 28px;
+        font-size: 18px;
     }
     
     .logo-image {
