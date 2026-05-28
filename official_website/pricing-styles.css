@@ -357,6 +357,8 @@ body {
     transition: all 0.35s ease;
     display: flex;
     flex-direction: column;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .pricing-card:hover {
@@ -633,6 +635,8 @@ body {
     margin: 0 auto;
     padding: 0 60px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .brand-logo-area {
@@ -686,9 +690,11 @@ body {
 /* Feature Matrix Grid */
 .feature-matrix {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 22px;
     margin-top: 72px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .feature-matrix-item {
@@ -702,6 +708,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .feature-matrix-item:hover {
@@ -729,7 +738,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(85% - 60px);
+    flex: 1;
+    min-width: 0;
 }
 
 .feature-title {
@@ -750,7 +760,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: #6B7280;
-    max-width: 220px;
+    width: 100%;
     text-align: left;
 }
 
