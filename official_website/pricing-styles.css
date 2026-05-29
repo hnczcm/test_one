@@ -1033,6 +1033,10 @@ body {
     color: white;
 }
 
+.footer-nav a {
+    text-decoration: none;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 20px;

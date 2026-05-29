@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NextoolSoft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Page Background */
+        .page-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(90deg, #EAF6FF 0%, #F7F4FF 100%);
+        }
+
+        /* Header Styles */
+        .header {
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 64px;
+            position: relative;
+            z-index: 10;
+            background: transparent;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .logo-placeholder {
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            background: #D9D9D9;
+        }
+        .header-brand {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1F2937;
+            letter-spacing: -0.5px;
+        }
+        .header-nav {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            cursor: pointer;
+            transition: opacity 0.25s;
+        }
+        .header-nav:hover {
+            opacity: 0.75;
+        }
+
+        /* Content Container */
+        .content-wrapper {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 16px;
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+        ul {
+            margin: 15px 0 15px 30px;
+            color: #555;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .intro {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .info-box p {
+            margin-bottom: 8px;
+        }
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        .special-note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background: #1D1D22;
+            padding: 72px 0 42px;
+            position: relative;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #D9D9D9;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .footer-brand-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -1px;
+            margin-left: -50px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .footer-links span,
+        .footer-links a {
+            font-size: 16px;
+            color: #A0AEC0;
+            cursor: pointer;
+            transition: color 0.25s;
+            display: inline-block;
+        }
+        .footer-links span:hover,
+        .footer-links a:hover {
+            color: white;
+        }
+        .footer-col-empty {
+            /* Right side whitespace for balance */
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 70px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+        .footer-legal-links {
+            display: flex;
+            gap: 32px;
+        }
+        .footer-legal-links a {
+            font-size: 15px;
+            color: #A0AEC0;
+            cursor: pointer;
+            transition: color 0.25s;
+        }
+        .footer-legal-links a:hover {
+            color: white;
+        }
+        .footer-copyright {
+            font-size: 13px;
+            color: #7B8190;
+            margin: 0;
+        }
+
+        /* Footer Responsive */
+        @media (max-width: 1024px) {
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+            .footer-brand {
+                grid-column: span 2;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+            .footer-logo-placeholder {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 640px) {
+            .site-footer {
+                padding: 56px 0 36px;
+            }
+            .footer-inner {
+                padding: 0 24px;
+            }
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .footer-brand {
+                grid-column: span 1;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-logo-placeholder {
+                margin-bottom: 16px;
+            }
+            .footer-col-empty {
+                display: none;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .footer-legal-links {
+                flex-wrap: wrap;
+                gap: 16px 24px;
+            }
+            .header {
+                padding: 0 24px;
+            }
+            .container {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Background -->
+    <div class="page-bg"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">
+            <div class="logo-placeholder"></div>
+            <span class="header-brand">NextoolSoft</span>
+        </a>
+        <span class="header-nav">NexZip</span>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+
+            <div class="intro">
+                <p>This Privacy Policy constitutes an agreement between you (the "User") and Geek Falcon Technology Co., Limited (hereinafter referred to as "we", "us", or "our company") regarding the website www.nextoolsoft.com (the "Website") and all associated software (the "Software").</p>
+                <p>The Software and the Website place great importance on the protection of your personal information and privacy. To ensure transparency, we have developed this Privacy Policy to explain how we collect, store, use, share, and protect your information. This document (the "Privacy Policy") is intended to provide you with a clear understanding of how we handle your personal information through the Software and the Website.</p>
+                <p>Because this Privacy Policy is closely related to your use of the Software, the Website, and their related products or services, please read and fully understand this document — especially the sections presented in bold — before using any of our products or services, and make any choices you deem appropriate accordingly.</p>
+                <p>We are committed to taking all necessary measures to ensure the security of your personal information, in strict compliance with applicable laws and regulations. If you do not agree with any part of this Privacy Policy, you must immediately stop using the Software, the Website, or any related services. By using the Software or any product or service of the Website, you confirm that you fully understand and agree to all terms of this Privacy Policy.</p>
+            </div>
+
+            <hr class="divider">
+
+            <h2>I. Agreement Overview</h2>
+            <h3>Agreement Update and Effective Date</h3>
+            <ul>
+                <li><strong>Last Updated:</strong> 28 May 2026</li>
+                <li><strong>Effective Date:</strong> 28 May 2026</li>
+            </ul>
+            <h3>Operator Information</h3>
+            <p>This Software and Website are operated by:</p>
+            <ul>
+                <li><strong>Company Name:</strong> Geek Falcon Technology Co., Limited</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>II. Information Collection</h2>
+            <h3>Information You Provide Voluntarily</h3>
+            <p>When you use our services, we may collect certain personal information that you voluntarily provide or upload. The specific information collected depends on the services you choose to use.</p>
+            <p>For sensitive personal information (such as bank account details, registration information, browser history, etc.), we will separately inform you of the purpose, method, and scope of collection and use, and will obtain your explicit consent before proceeding.</p>
+
+            <h3>Information Collected Automatically</h3>
+            <p>When you use our Software and Website, we may automatically collect certain information about your device, browser, and network connection, including but not limited to:</p>
+            <ul>
+                <li>Basic information collected during account registration (e.g., name, email address)</li>
+                <li>Location information, device details, browsing history, and other data generated during your use of our services</li>
+            </ul>
+            <p>This information is used to identify users, record system errors, analyze user behavior, and improve our services.</p>
+
+            <div class="special-note">
+                <strong>Special Note:</strong><br>
+                We may obtain your IP address, but this is used only to calculate the local currency equivalent of membership package amounts. Your IP address will not be used for any other purpose.
+            </div>
+
+            <hr class="divider">
+
+            <h2>III. Use of Information</h2>
+            <h3>Service Provision</h3>
+            <p>We may use the personal information we collect to enable the functions of our products and/or services when you use those features, or in other circumstances as described in this Privacy Policy.</p>
+
+            <h3>Network Security</h3>
+            <p>To enhance the security of your use of our services, we may use your personal information to prevent, detect, or investigate potential security risks.</p>
+
+            <h3>Statistical Analysis and Operational Improvement</h3>
+            <p>We may use personal information collected during the course of our business for statistical analysis and operational improvement purposes — for example, analyzing information based on your location or preferences — in order to improve our products, services, or marketing strategies.</p>
+
+            <h3>Third-Party Services</h3>
+            <p>We may share personal data with third parties that provide services to the Software or the Website, such as analytics providers and website management platforms.</p>
+
+            <hr class="divider">
+
+            <h2>IV. Information Sharing and Disclosure</h2>
+            <h3>Sharing Principles</h3>
+            <p>We will only share your personal information with third parties in compliance with applicable laws and regulations and the terms of this Privacy Policy.</p>
+
+            <h3>Sharing Without Consent</h3>
+            <p>In the following circumstances, we are not required to obtain your authorized consent to collect and use personal information:</p>
+            <ul>
+                <li>Matters related to national security or national defense security</li>
+                <li>Matters related to public security, public health, or significant public interests</li>
+                <li>Matters related to criminal investigations, prosecutions, trials, or the enforcement of judgments</li>
+                <li>Other circumstances as stipulated by applicable laws and regulations</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>V. Information Security</h2>
+            <h3>Security Measures</h3>
+            <p>We will take all reasonably necessary measures to protect the security of your personal information and to prevent it from being leaked, stolen, or misused.</p>
+
+            <h3>Data Retention</h3>
+            <p>We will determine the retention period for personal information on a reasonable basis, taking into account your needs and the requirements of applicable laws and regulations.</p>
+
+            <hr class="divider">
+
+            <h2>VI. User Rights</h2>
+            <h3>Access and Correction</h3>
+            <p>You have the right to access and correct the personal information we hold about you.</p>
+
+            <h3>Deletion</h3>
+            <p>You have the right to request that we delete your personal information in accordance with applicable laws and regulations and the provisions of this Privacy Policy.</p>
+
+            <h3>Complaints and Reporting</h3>
+            <p>If you have any questions or complaints regarding our handling of your personal information, you may contact us through our customer service contact information listed in this agreement.</p>
+
+            <h3>Disclosure of Third-Party Services</h3>
+            <p>We may integrate third-party services or SDKs to provide richer functionality. In such cases, we will clearly disclose the name of the third-party service or SDK provider, the types of data they require, and a link to their privacy policy.</p>
+
+            <hr class="divider">
+
+            <h2>VII. Complaint and Suggestion Channels</h2>
+            <p>If you have any questions, feedback, or complaints regarding this Privacy Policy, please contact us via:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@nextoolsoft.com">support@nextoolsoft.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/nextoolsoft_logo.png" alt="NextoolSoft Logo" width="81" height="50" style="margin-bottom: 20px;">
+                    <span class="footer-brand-name">NextoolSoft</span>
+                </div>
+                <div class="footer-col">
+                    <h4>Product Line</h4>
+                    <div class="footer-links">
+                        <a href="index.html" style="color: #A0AEC0; text-decoration: none;">NexZip</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>NextoolSoft</h4>
+                    <div class="footer-links">
+                        <a href="about.html" style="color: #A0AEC0; text-decoration: none;">About Us</a>
+                        <a href="contact.html" style="color: #A0AEC0; text-decoration: none;">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col footer-col-empty"></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & conditions</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+                <p class="footer-copyright">Copyright ©2026 Master Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

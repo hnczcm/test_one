@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - NextoolSoft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Page Background */
+        .page-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(90deg, #EAF6FF 0%, #F7F4FF 100%);
+        }
+
+        /* Header Styles */
+        .header {
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 64px;
+            position: relative;
+            z-index: 10;
+            background: transparent;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .logo-placeholder {
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            background: #D9D9D9;
+        }
+        .header-brand {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1F2937;
+            letter-spacing: -0.5px;
+        }
+        .header-nav {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            cursor: pointer;
+            transition: opacity 0.25s;
+        }
+        .header-nav:hover {
+            opacity: 0.75;
+        }
+
+        /* Content Container */
+        .content-wrapper {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 16px;
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+        ul {
+            margin: 15px 0 15px 30px;
+            color: #555;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .intro {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .intro h2 {
+            margin-top: 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background: #1D1D22;
+            padding: 72px 0 42px;
+            position: relative;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #D9D9D9;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .footer-brand-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -1px;
+            margin-left: -50px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .footer-links span,
+        .footer-links a {
+            font-size: 16px;
+            color: #A0AEC0;
+            cursor: pointer;
+            transition: color 0.25s;
+            display: inline-block;
+        }
+        .footer-links span:hover,
+        .footer-links a:hover {
+            color: white;
+        }
+        .footer-col-empty {
+            /* Right side whitespace for balance */
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 70px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+        .footer-legal-links {
+            display: flex;
+            gap: 32px;
+        }
+        .footer-legal-links a {
+            font-size: 15px;
+            color: #A0AEC0;
+            cursor: pointer;
+            transition: color 0.25s;
+        }
+        .footer-legal-links a:hover {
+            color: white;
+        }
+        .footer-copyright {
+            font-size: 13px;
+            color: #7B8190;
+            margin: 0;
+        }
+
+        /* Footer Responsive */
+        @media (max-width: 1024px) {
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+            .footer-brand {
+                grid-column: span 2;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+            .footer-logo-placeholder {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 640px) {
+            .site-footer {
+                padding: 56px 0 36px;
+            }
+            .footer-inner {
+                padding: 0 24px;
+            }
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .footer-brand {
+                grid-column: span 1;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-logo-placeholder {
+                margin-bottom: 16px;
+            }
+            .footer-col-empty {
+                display: none;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .footer-legal-links {
+                flex-wrap: wrap;
+                gap: 16px 24px;
+            }
+            .header {
+                padding: 0 24px;
+            }
+            .container {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Background -->
+    <div class="page-bg"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">
+            <div class="logo-placeholder"></div>
+            <span class="header-brand">NextoolSoft</span>
+        </a>
+        <span class="header-nav">NexZip</span>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <h1>NextoolSoft General Terms and Conditions</h1>
+
+            <div class="intro">
+                <h2>Introduction</h2>
+                <p>Please read these Software and Website Terms and Conditions (referred to as "these Terms") carefully before downloading, installing, or using any NextoolSoft-branded software, website (collectively, the "Software and Website"), or related services.</p>
+                <p>You are encouraged to pay particular attention to the sections presented in bold, as they address matters that may significantly affect your rights and interests — including, but not limited to, provisions that exclude or limit our liability, restrict user rights, or govern dispute resolution and jurisdiction.</p>
+                <p>By installing, copying, downloading, accessing, or otherwise using the Software or Website, you will be deemed to have accepted these Terms, meaning that you agree to be bound by all provisions contained herein. If you do not agree with any part of these Terms, please do not install or use the Software or Website.</p>
+            </div>
+
+            <hr class="divider">
+
+            <h2>I. Statement of Rights</h2>
+            <p>These Terms apply to the website at nextoolsoft.com (the "Website") and all software (the "Software") developed jointly by you (the "User") and Geek Falcon Technology Co., Limited (the "Company").</p>
+            <p>All copyright and other intellectual property rights in and to the Software, the Website, and all related information and content — including, but not limited to, textual expressions and their combinations, icons, graphics, diagrams, colors, interface designs, layouts, frames, related data, printed materials, and electronic documents — are owned by us. These rights are protected by copyright laws, international copyright treaties, and other applicable intellectual property laws and regulations.</p>
+
+            <hr class="divider">
+
+            <h2>II. Scope of Rights</h2>
+            <h3>2.1 Permitted Use</h3>
+            <p>The User may install, use, display, and operate the Software and Website on a single computer.</p>
+
+            <h3>2.2 Reservation of Rights</h3>
+            <p>All rights not expressly granted to you under these Terms remain with us. Any use of such other rights requires our prior written consent.</p>
+
+            <h3>2.3 Other Services</h3>
+            <p>Except as expressly provided in these Terms, this agreement does not govern any other services that may be accessed through the Software and Website. Such services may be subject to separate terms of service, which you should review and accept independently when using those services. By using any such service, you will be deemed to have accepted the applicable terms of service.</p>
+
+            <hr class="divider">
+
+            <h2>III. Notice to Users</h2>
+            <p>3.1 To protect the rights and privacy of users, this Software and Website contain no malicious code intended to damage user data or obtain private information. They contain no tracking or monitoring functionality and will not monitor your online or offline behavior or disclose your privacy.</p>
+            <p>3.2 The Software and Website provide functions for uploading, downloading, applying, and launching client applications via web-based management. We also reserve the right to provide modifications and upgrades to the Software and Website.</p>
+            <p>3.3 You may use the Software and Website in accordance with these Terms, provided that you comply with all applicable laws and the provisions of this agreement. You are not authorized to engage in any of the following acts, including but not limited to:</p>
+            <ul>
+                <li>3.3.1 Removing any copyright notices or other proprietary information from the Software or any copies thereof;</li>
+                <li>3.3.2 Circumventing or disabling any technical measures used by the copyright owner to protect the Software or Website;</li>
+                <li>3.3.3 Without our written consent, engaging in any unauthorized use of Software or Website-related information, including but not limited to: using, copying, modifying, linking, reproducing, compiling, publishing, distributing, setting up mirror sites, or developing derivative products or services;</li>
+                <li>3.3.4 Using the Software or Website to publish, transmit, disseminate, or store any content that violates applicable law, or any inappropriate, insulting, defamatory, obscene, or violent content;</li>
+                <li>3.3.5 Using the Software or Website to publish, transmit, disseminate, or store content that infringes upon the intellectual property rights, trade secrets, or other legal rights of others;</li>
+                <li>3.3.6 Using the Software or Website to mislead or deceive others;</li>
+                <li>3.3.7 Using the Software or Website to transmit or distribute files that contain images, photographs, software, websites, or other materials protected by intellectual property laws (including, for example, copyright or trademark laws, or rights of privacy or publicity), unless you own or control the relevant rights or have obtained all necessary approvals;</li>
+                <li>3.3.8 Using the Software, Website, or any images, photographs, or other materials obtained through them in a manner that infringes upon any trademark, copyright, patent, trade secret, or other proprietary right of any party;</li>
+                <li>3.3.9 Engaging in any conduct that endangers computer network security, including but not limited to: accessing unauthorized data or servers/accounts; entering public networks or others' computer systems without permission and deleting, modifying, or adding stored information; attempting to detect, scan, or test the vulnerabilities of the Software or Website system or network; interfering with or disrupting the normal operation of the Software or Website; intentionally spreading malicious programs or viruses; forging TCP/IP packet headers or name components.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>IV. Fees and Payments</h2>
+            <p>4.1 Certain features of the Software and Website may require payment of fees. Please review the applicable fees and payment rules before using such features.</p>
+            <p>4.2 We may, at any time and without prior notice to you, adjust the specific features, service content (whether fee-based or free), and fee structures of the Software and Website based on operational changes. However, we will make reasonable efforts to ensure that such adjustments do not materially and adversely affect your existing rights and interests.</p>
+
+            <hr class="divider">
+
+            <h2>V. Confidentiality</h2>
+            <p>5.1 All data and information of the other party that becomes known to either party during the term of these Terms — including but not limited to basic information, business conditions, financial status, trade secrets, and technical secrets — shall be maintained in strict confidence.</p>
+            <p>5.2 The party owning such information agrees that the other party may disclose such information only in the following circumstances:</p>
+            <ul>
+                <li>The information becomes publicly available through no fault of the receiving party;</li>
+                <li>Disclosure is required by any law, regulation, governing document, judicial proceeding, or dispute resolution process;</li>
+                <li>Disclosure is made to the disclosing party's affiliated organizations or project managers;</li>
+                <li>Disclosure is made with the prior consent of the information owner.</li>
+            </ul>
+            <p>5.3 The confidentiality obligations set forth in this section shall survive any termination of these Terms.</p>
+
+            <hr class="divider">
+
+            <h2>VI. Liability and Disclaimer</h2>
+            <p>6.1 To preserve our operational flexibility, we reserve the right to modify or discontinue the Software or Website authorization at any time at our sole discretion, with or without notice to users. If reasonably practicable, we will post notices of such modifications or discontinuation on important pages of our website.</p>
+            <p>6.2 You agree to indemnify and hold harmless us, our partner companies, and our affiliates from any claims, demands, or damages (including reasonable litigation costs and attorney's fees) asserted by any third party arising out of or relating to your violation of these Terms or any applicable terms of service. In response to such violations, we may take measures including, but not limited to, suspending your license, stopping service provision, restricting use, or pursuing legal action.</p>
+            <p>6.3 Your use of the Software and Website is at your sole risk. We disclaim all warranties of any kind, whether express, implied, or statutory, including but not limited to warranties of merchantability, fitness for a particular purpose, freedom from viruses, absence of negligence or technical defects, title, quiet enjoyment, and non-infringement. Under no circumstances shall we or our partners be liable for any direct, indirect, incidental, special, or consequential damages or risks arising out of or related to the use or inability to use the Software or Website.</p>
+            <p>6.4 In the event of technical failures or other force majeure events that affect normal service operation, we will work promptly with relevant parties to address and repair the issue. However, we shall not be held responsible for any economic losses you may incur as a result.</p>
+            <p>6.5 If we discover, or receive notice or complaints from others, that you have violated these Terms, we have the right to delete the relevant content at any time without prior notice. Depending on the nature of the violation, we may impose penalties on the offending account, including but not limited to warnings, restricting or disabling all or part of the functionality, suspending or canceling the account, and publishing the results of such actions.</p>
+            <p>6.6 You understand and agree that we have the right, based on reasonable judgment, to impose penalties for violations of applicable laws or these Terms, to take appropriate legal action against any user who violates laws or regulations, and to preserve relevant information for submission to the appropriate authorities. You shall bear all legal liabilities arising therefrom (including but not limited to attorney's fees, litigation costs, preservation costs, appraisal fees, enforcement costs, and travel expenses).</p>
+            <p>6.7 You understand and agree that you shall be solely responsible for any claims, demands, or losses asserted by any third party as a result of your violation of these Terms or any applicable terms of service. If we suffer losses as a result (including but not limited to attorney's fees, litigation costs, preservation costs, appraisal fees, enforcement costs, and travel expenses), you shall also be liable for compensation.</p>
+
+            <hr class="divider">
+
+            <h2>VII. Force Majeure</h2>
+            <p>7.1 For the purposes of these Terms, "Force Majeure" means any event that is unforeseeable, unavoidable, and insurmountable, including but not limited to earthquakes, typhoons, floods, fires, wars, or other events recognized as force majeure under commercial practice.</p>
+            <p>7.2 If a party is prevented from performing or delayed in performing its obligations under these Terms due to a Force Majeure event, that party (the "Affected Party") shall not be deemed in breach of these Terms, provided that all of the following conditions are met:</p>
+            <ul>
+                <li>The inability to perform, in whole or in part, is a direct result of the Force Majeure event, and there was no delay in performance prior to the occurrence of that event;</li>
+                <li>The Affected Party has used its best efforts to perform its obligations and to mitigate any harm caused to the other party;</li>
+                <li>Upon the occurrence of the Force Majeure event, the Affected Party promptly notified the other party and provided a written description of the event within fifteen (15) days, including an explanation of any delay or partial performance.</li>
+            </ul>
+            <p>7.3 Once the Force Majeure event ceases or is resolved, the Affected Party shall resume performance of its obligations under these Terms and shall notify the other party as soon as possible. The Affected Party shall be granted an extension of time to perform equal to the actual delay caused by the Force Majeure event.</p>
+            <p>7.4 If a Force Majeure event continues for thirty (30) days or more, the parties shall negotiate a modification or termination of these Terms based on the impact of the event. If the parties are unable to reach an agreement within ten (10) days of either party's written notice requesting negotiation, either party shall be entitled to terminate these Terms without liability for breach of contract.</p>
+
+            <hr class="divider">
+
+            <h2>VIII. Dispute Resolution</h2>
+            <p>8.1 The formation, validity, interpretation, performance, execution, amendment, termination, and dispute resolution of these Terms shall be governed by applicable laws.</p>
+            <p>8.2 All questions, notices, requests, or demands regarding these Terms and the Privacy Policy should be addressed to us in English and sent to:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@nextoolsoft.com">support@nextoolsoft.com</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/nextoolsoft_logo.png" alt="NextoolSoft Logo" width="81" height="50" style="margin-bottom: 20px;">
+                    <span class="footer-brand-name">NextoolSoft</span>
+                </div>
+                <div class="footer-col">
+                    <h4>Product Line</h4>
+                    <div class="footer-links">
+                        <a href="index.html" style="color: #A0AEC0; text-decoration: none;">NexZip</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>NextoolSoft</h4>
+                    <div class="footer-links">
+                        <a href="about.html" style="color: #A0AEC0; text-decoration: none;">About Us</a>
+                        <a href="contact.html" style="color: #A0EC0; text-decoration: none;">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col footer-col-empty"></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & conditions</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+                <p class="footer-copyright">Copyright ©2026 Master Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

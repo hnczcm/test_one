@@ -1036,7 +1036,16 @@ body {
     font-size: 15px;
     font-weight: 400;
     text-decoration: none;
-    cursor: default;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.footer-nav-link:hover {
+    color: white;
+}
+
+.footer-nav a {
+    text-decoration: none;
 }
 
 .footer-bottom {

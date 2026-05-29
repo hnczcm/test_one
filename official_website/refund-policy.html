@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - NextoolSoft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Page Background */
+        .page-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(90deg, #EAF6FF 0%, #F7F4FF 100%);
+        }
+
+        /* Header Styles */
+        .header {
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 64px;
+            position: relative;
+            z-index: 10;
+            background: transparent;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .logo-placeholder {
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            background: #D9D9D9;
+        }
+        .header-brand {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1F2937;
+            letter-spacing: -0.5px;
+        }
+        .header-nav {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            cursor: pointer;
+            transition: opacity 0.25s;
+        }
+        .header-nav:hover {
+            opacity: 0.75;
+        }
+
+        /* Content Container */
+        .content-wrapper {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+        ul {
+            margin: 15px 0 15px 30px;
+            color: #555;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .intro {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .intro h2 {
+            margin-top: 0;
+        }
+        .contact-info {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+        .contact-info p:last-child {
+            margin-bottom: 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background: #1D1D22;
+            padding: 72px 0 42px;
+            position: relative;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #D9D9D9;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .footer-brand-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -1px;
+            margin-left: -50px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .footer-links span,
+        .footer-links a {
+            font-size: 16px;
+            color: #A0AEC0;
+            cursor: pointer;
+            transition: color 0.25s;
+            display: inline-block;
+        }
+        .footer-links span:hover,
+        .footer-links a:hover {
+            color: white;
+        }
+        .footer-col-empty {
+            /* Right side whitespace for balance */
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 70px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+        .footer-legal-links {
+            display: flex;
+            gap: 32px;
+        }
+        .footer-legal-links a {
+            font-size: 15px;
+            color: #A0AEC0;
+            cursor: pointer;
+            transition: color 0.25s;
+        }
+        .footer-legal-links a:hover {
+            color: white;
+        }
+        .footer-copyright {
+            font-size: 13px;
+            color: #7B8190;
+            margin: 0;
+        }
+
+        /* Footer Responsive */
+        @media (max-width: 1024px) {
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+            .footer-brand {
+                grid-column: span 2;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+            .footer-logo-placeholder {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 640px) {
+            .site-footer {
+                padding: 56px 0 36px;
+            }
+            .footer-inner {
+                padding: 0 24px;
+            }
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .footer-brand {
+                grid-column: span 1;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-logo-placeholder {
+                margin-bottom: 16px;
+            }
+            .footer-col-empty {
+                display: none;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .footer-legal-links {
+                flex-wrap: wrap;
+                gap: 16px 24px;
+            }
+            .header {
+                padding: 0 24px;
+            }
+            .container {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Background -->
+    <div class="page-bg"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">
+            <div class="logo-placeholder"></div>
+            <span class="header-brand">NextoolSoft</span>
+        </a>
+        <span class="header-nav">NexZip</span>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <h1>NextoolSoft Refund Policy</h1>
+
+            <div class="intro">
+                <h2>Introduction: Overview of Membership Refund Policy</h2>
+                <p>We are dedicated to delivering a high-quality software membership experience to you, the user. At the same time, we recognize that situations may arise where a refund is requested. To ensure that your rights are properly protected, we have established the following 30-day refund policy for software memberships. Please read this policy carefully before using NextoolSoft services. If you do not agree with any part of this policy, please do not proceed with your purchase. By completing the purchase of a membership, you confirm that you fully accept all terms outlined in this policy.</p>
+            </div>
+
+            <div class="contact-info">
+                <h2>Service Provider Information</h2>
+                <p><strong>Company Name:</strong> Geek Falcon Technology Co., Limited (hereinafter referred to as "we", "us", or "our company")</p>
+                <p><strong>Website URL:</strong> <a href="https://www.nextoolsoft.com">https://www.nextoolsoft.com</a></p>
+                <p><strong>Customer Service Email:</strong> <a href="mailto:support@nextoolsoft.com">support@nextoolsoft.com</a></p>
+            </div>
+
+            <hr class="divider">
+
+            <h2>I. Scope of the Refund Policy</h2>
+            <p>Our software includes a 30-day membership refund policy designed to safeguard the legitimate rights of users. However, please note that refund requests submitted within the 30-day period will not be granted under the following circumstances:</p>
+            <ul>
+                <li><strong>Membership Expired</strong> – If the membership you purchased has already passed its validity period, refunds will not be processed.</li>
+                <li><strong>Beyond 30 Days</strong> – If more than 30 days have elapsed since the purchase date, refunds are no longer supported.</li>
+                <li><strong>Requests Beyond Functional Scope</strong> – Refunds requested based on feature suggestions or requirements that fall outside the product's current capabilities will not be accepted.</li>
+                <li><strong>Credit Card Fraud or Unauthorized Payment</strong> – If the issue arises from credit card fraud or an unauthorized payment, we recommend contacting the relevant card issuer directly for resolution.</li>
+                <li><strong>Refund Request Without Payment Email</strong> – If you initiate a refund request without having received the payment confirmation email, please first contact our customer service team (email: support@nextoolsoft.com) to verify your payment status before proceeding.</li>
+                <li><strong>Change of Mind After Purchase</strong> – Refunds will not be issued if you simply change your mind after completing the purchase.</li>
+                <li><strong>Purchases from Unofficial Platforms</strong> – If you purchased your membership through a platform or third-party seller other than our official website (https://www.nextoolsoft.com), please contact that platform or seller directly to request a refund.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>II. Circumstances Eligible for a 30-Day Refund</h2>
+            <p>Refund requests submitted within 30 days of purchase will be supported in the following cases:</p>
+            <ul>
+                <li><strong>No Email Received and No Customer Service Response</strong> – If you do not receive the relevant email within 24 hours of purchase and your inquiry to customer service remains unanswered for 24 hours without resolution, a refund will be considered.</li>
+                <li><strong>Critical Bug Remains Unfixed</strong> – If you identify a critical software defect during use, and the issue has not been upgraded or fixed within 15 business days after reporting it to customer service, a refund will be processed.</li>
+                <li><strong>Duplicate Purchase</strong> – If you accidentally purchase the same membership product with the same package twice, a refund will be processed for the duplicate order.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>III. Refund Process</h2>
+            <ul>
+                <li><strong>Submit a Request</strong> – Please send your refund request to our customer service email (support@nextoolsoft.com), along with proof of purchase (e.g., order number, payment screenshot, etc.).</li>
+                <li><strong>Application Review</strong> – Our customer service team will review your application within 15 business days of receipt to determine whether it meets the refund conditions.</li>
+                <li><strong>Refund Processing</strong> – Once your application is approved, we will process the refund as quickly as possible. The refund amount will be returned to your original payment account using the original payment method.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>IV. Other Terms</h2>
+            <ul>
+                <li><strong>Privacy Protection</strong> – We are committed to protecting your personal information and will not disclose your data to any third party.</li>
+                <li><strong>Dispute Resolution</strong> – Any dispute arising from this policy shall first be settled through amicable negotiation between the parties. If negotiation fails, the dispute may be submitted to the competent People's Court located in the jurisdiction where our company is registered.</li>
+            </ul>
+
+            <hr class="divider">
+
+            <h2>V. Policy Updates and Notifications</h2>
+            <p>We may update this membership refund policy from time to time in response to changes in laws, regulations, or our business needs. Any updated version will be published on our platform, and we will notify you via email or other appropriate means. By continuing to use our services after the updated policy takes effect, you are deemed to have accepted the revised terms. The revised refund policy will be posted on our software and website and will become effective as of the date of publication.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/nextoolsoft_logo.png" alt="NextoolSoft Logo" width="81" height="50" style="margin-bottom: 20px;">
+                    <span class="footer-brand-name">NextoolSoft</span>
+                </div>
+                <div class="footer-col">
+                    <h4>Product Line</h4>
+                    <div class="footer-links">
+                        <a href="index.html" style="color: #A0AEC0; text-decoration: none;">NexZip</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>NextoolSoft</h4>
+                    <div class="footer-links">
+                        <a href="about.html" style="color: #A0AEC0; text-decoration: none;">About Us</a>
+                        <a href="contact.html" style="color: #A0AEC0; text-decoration: none;">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col footer-col-empty"></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & conditions</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+                <p class="footer-copyright">Copyright ©2026 Master Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
