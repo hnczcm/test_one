@@ -318,7 +318,7 @@ body {
     height: 72px;
     background: var(--gradient-primary);
     color: var(--white);
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     border-radius: 999px;
     box-shadow: 0 16px 40px rgba(47, 128, 255, 0.28);
@@ -335,8 +335,8 @@ body {
 }
 
 .btn-icon {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
 }
 
 .btn-pricing {
@@ -570,7 +570,7 @@ body {
 }
 
 .function-main-title {
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 800;
     color: #2B2B2B;
     letter-spacing: -1px;
@@ -882,7 +882,7 @@ body {
 }
 
 .slogan-line {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 500;
     color: #4B5563;
     line-height: 1.4;
