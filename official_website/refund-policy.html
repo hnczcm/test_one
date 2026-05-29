@@ -43,6 +43,8 @@
             background: transparent;
         }
         .header-logo {
+            position: absolute;
+            left: calc(50% - 600px);
             display: flex;
             align-items: center;
             gap: 14px;
@@ -58,8 +60,11 @@
             font-weight: 700;
             color: #1F2937;
             letter-spacing: -0.5px;
+            padding-top: 5px;
         }
         .header-nav {
+            position: absolute;
+            right: calc(50% - 500px);
             font-size: 18px;
             font-weight: 600;
             color: #111827;
@@ -155,11 +160,13 @@
             grid-template-columns: auto 1fr 1fr 1fr;
             gap: 60px;
             align-items: flex-start;
+            padding-left: 100px;
         }
         .footer-brand {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            margin-left: -200px;
         }
         .footer-logo-placeholder {
             width: 60px;
@@ -197,9 +204,6 @@
         .footer-links span:hover,
         .footer-links a:hover {
             color: white;
-        }
-        .footer-col-empty {
-            /* Right side whitespace for balance */
         }
         .footer-bottom {
             display: flex;
