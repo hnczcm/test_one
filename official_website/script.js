@@ -44,8 +44,8 @@ function initScrollAnimations() {
         if (!el.style.opacity && !el.classList.contains('animated')) {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            el.dataset.delay = index * 100;
+            el.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            el.dataset.delay = index * 30;
         }
         observer.observe(el);
     });
@@ -95,8 +95,8 @@ function initIntersectionObserver() {
     iconItems.forEach((item, index) => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        item.dataset.delay = index * 80;
+        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        item.dataset.delay = index * 30;
     });
     
     // CTA buttons animation
@@ -104,8 +104,8 @@ function initIntersectionObserver() {
     ctaButtons.forEach((btn, index) => {
         btn.style.opacity = '0';
         btn.style.transform = 'translateY(20px)';
-        btn.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        btn.dataset.delay = 400 + index * 100;
+        btn.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        btn.dataset.delay = 400 + index * 30;
     });
     
     // Add ripple effect to buttons

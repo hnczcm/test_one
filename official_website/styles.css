@@ -269,7 +269,7 @@ body {
 /* Left Content */
 .banner-content {
     width: 520px;
-    animation: fadeUp 1s ease;
+    animation: fadeUp 0.5s ease;
 }
 
 .main-title {
@@ -365,7 +365,7 @@ body {
 .panel-image {
     width: 760px;
     height: auto;
-    animation: fadeUp 1s ease 0.2s backwards;
+    animation: fadeUp 0.5s ease 0.2s backwards;
 }
 
 .mockup-card {
@@ -1095,7 +1095,7 @@ body {
 [data-animate] {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.8s ease;
+    transition: all 0.3s ease;
 }
 
 [data-animate].animated {
